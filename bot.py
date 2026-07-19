@@ -1,24 +1,8 @@
 import discord
-import os
-import sys
 import random
 
-TOKEN = os.environ.get("DISCORD_BOT_TOKEN")
-WELCOME_CHANNEL_ID_RAW = os.environ.get("WELCOME_CHANNEL_ID")
-
-if not TOKEN:
-    print("ERROR: DISCORD_BOT_TOKEN environment variable is not set.", file=sys.stderr)
-    sys.exit(1)
-
-if not WELCOME_CHANNEL_ID_RAW:
-    print("ERROR: WELCOME_CHANNEL_ID environment variable is not set.", file=sys.stderr)
-    sys.exit(1)
-
-try:
-    WELCOME_CHANNEL_ID = int(WELCOME_CHANNEL_ID_RAW)
-except ValueError:
-    print(f"ERROR: WELCOME_CHANNEL_ID must be a number, got: {WELCOME_CHANNEL_ID_RAW}", file=sys.stderr)
-    sys.exit(1)
+TOKEN = "MTUyNzg3MzcwNTMxNTY2ODAzMQ.G_0jq-.iBlDXVv-skbeef6mBFEae-aN3smUGBD15dBDHA"
+WELCOME_CHANNEL_ID = 1527871481227378752
 
 intents = discord.Intents.default()
 intents.members = True
